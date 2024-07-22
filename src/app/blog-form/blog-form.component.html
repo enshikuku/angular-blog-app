@@ -1,0 +1,45 @@
+<div class="blog-form">
+    @if (postId) {
+        <h2>Edit Post</h2>
+    } @else {
+        <h2>Create New Post</h2>
+    }
+
+    <form [formGroup]="blogForm" (ngSubmit)="onSubmit()">
+        <label for="title">Title</label>
+        <input id="title" formControlName="title" type="text">
+
+        @if (blogForm.get('title')?.invalid && (blogForm.get('title')?.touched || blogForm.get('title')?.dirty)) {
+        <div>
+            @if (blogForm.get('title')?.errors?.['required']) {
+            <small>Title is required.</small>
+            }
+            @if (blogForm.get('title')?.errors?.['minlength']) {
+            <small>Title must be at least 3 characters long.</small>
+            }
+        </div>
+        }
+
+        <label for="body">Body</label>
+        <textarea id="body" formControlName="body"></textarea>
+
+        @if (blogForm.get('body')?.invalid && (blogForm.get('body')?.touched || blogForm.get('body')?.dirty)) {
+        <div>
+            @if (blogForm.get('body')?.errors?.['required']) {
+            <small>Body is required.</small>
+            }
+            @if (blogForm.get('body')?.errors?.['minlength']) {
+            <small>Body must be at least 10 characters long.</small>
+            }
+        </div>
+        }
+
+        <button type="submit" [disabled]="blogForm.invalid">
+        @if (postId) {
+            Update Post
+        } @else {
+            Create Post
+        }
+        </button>
+    </form>
+</div>
