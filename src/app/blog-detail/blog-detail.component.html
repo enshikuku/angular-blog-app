@@ -1,1 +1,8 @@
-<p>blog-detail works!</p>
+@if (post) {
+    <div class="blog-detail">
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.body }}</p>
+        <a routerLink="/blog-list" class="back-link">Back to Blog List</a>
+    </div>
+}
+
