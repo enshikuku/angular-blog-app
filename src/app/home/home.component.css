@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #167AA0;
+    padding: 1rem 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    /* background: url('hero-bg.jpg') no-repeat center center/cover; */
+    color: white;
+    text-align: center;
+    padding: 5rem 1rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+}
+
+.hero .btn {
+    background-color: #167AA0;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-top: 1rem;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.recent-posts {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.recent-posts h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.posts {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.post {
+    background-color: #f4f4f4;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.post h3 {
+    font-size: 1.5rem;
+}
+
+.post p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.post .read-more {
+    color: #167AA0;
+    text-decoration: none;
+    font-weight: bold;
+}

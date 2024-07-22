@@ -1,0 +1,41 @@
+.blog-list {
+    padding: 2rem 1rem;
+  }
+  
+  .blog-list h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .post {
+    background-color: #f4f4f4;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .post h3 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
+  .post p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+  }
+  
+  .post .read-more {
+    color: #167AA0;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
