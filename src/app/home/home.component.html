@@ -3,22 +3,19 @@
     <section class="hero">
       <h1>Welcome to My Personal Blog</h1>
       <p>Sharing thoughts, ideas, and experiences.</p>
-      <a href="/blog" class="btn">Explore Blog Posts</a>
+      <a href="/blog-list" class="btn">Explore Blog Posts</a>
     </section>
 
     <section class="recent-posts">
       <h2>Recent Posts</h2>
       <div class="posts">
-        <div class="post">
-          <h3>Post Title 1</h3>
-          <p>Summary of the blog post...</p>
-          <a href="/blog/1" class="read-more">Read More</a>
-        </div>
-        <div class="post">
-          <h3>Post Title 2</h3>
-          <p>Summary of the blog post...</p>
-          <a href="/blog/2" class="read-more">Read More</a>
-        </div>
+        @for (post of posts.slice(0, 4); track $index) {
+          <div class="post">
+            <h3>{{ post.title }}</h3>
+            <p>{{ post.body }}</p>
+            <a [routerLink]="['/blog-list', post.id]" class="read-more">Read More</a>
+          </div>
+        }
       </div>
     </section>
   </main>
