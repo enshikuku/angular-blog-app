@@ -3,6 +3,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { BlogListComponent } from './blog-list/blog-list.component';
+import { BlogDetailComponent } from './blog-detail/blog-detail.component';
 
 
 export const routes: Routes = [
@@ -10,5 +11,13 @@ export const routes: Routes = [
     { path: 'home', component: HomeComponent },
     { path: 'login', component: LoginComponent},
     { path: 'register', component: RegisterComponent},
-    { path: 'blog-list', component: BlogListComponent}
+    { 
+        path: 
+            'blog-list', 
+        component: 
+            BlogListComponent,
+    },{
+        path: 'blog-list/:id',
+        component: BlogDetailComponent
+    }
 ];
